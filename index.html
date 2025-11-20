@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash Sorter - Algoritmos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="modal-detalhes" class="modal-overlay hidden">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modal-titulo">Nome do Deck</h2>
+        <div class="modal-stats" id="modal-stats">
+        </div>
+        <h3>Cartas do Deck:</h3>
+        <div class="grid-cartas" id="modal-cartas-grid">
+        </div>
+    </div>
+</div>
+
+<div class="app-container">
+    <aside class="sidebar">
+        <h2>Defina sua Estratégia</h2>
+
+        <div class="control-group">
+            <label>Prioridade de Ataque ⚔️</label>
+            <input type="range" id="slider-ataque" min="0" max="100" value="50">
+            <span id="val-ataque">50</span>
+        </div>
+        <div class="control-group">
+            <label>Prioridade de Defesa 🛡️</label>
+            <input type="range" id="slider-defesa" min="0" max="100" value="50">
+            <span id="val-defesa">50</span>
+        </div>
+        <div class="control-group">
+            <label>Economia de Elixir 💧</label>
+            <input type="range" id="slider-elixir" min="0" max="100" value="50">
+            <span id="val-elixir">50</span>
+        </div>
+
+        <div class="action-box">
+            <h3>Comparar Algoritmos</h3>
+            <button id="btn-quick" class="btn btn-green">⚡ Quick Sort (Instantâneo)</button>
+            <button id="btn-bubble" class="btn btn-red">🐌 Bubble Sort (Didático)</button>
+            <p id="status-algo" class="status-text">Aguardando...</p>
+        </div>
+
+        <div class="stats-box">
+            <p>Total no Banco: <strong id="total-decks">0</strong></p>
+            <p>Top Score: <strong id="top-score">0</strong></p>
+        </div>
+    </aside>
+
+    <main>
+        <h1>Resultados da Busca</h1>
+        <div id="grid-resultados" class="card-grid"></div>
+    </main>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
